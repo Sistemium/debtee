@@ -10,12 +10,9 @@ import morgan from 'morgan';
 import compression from 'compression';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
-import cookieParser from 'cookie-parser';
 import errorHandler from 'errorhandler';
 import path from 'path';
 import config from './environment';
-import passport from 'passport';
-import session from 'express-session';
 
 export default function(app) {
   var env = app.get('env');
@@ -26,7 +23,6 @@ export default function(app) {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use(methodOverride());
-  app.use(passport.initialize());
 
   app.set('appPath', path.join(config.root, 'client'));
 
