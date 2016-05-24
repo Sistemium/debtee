@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('authApiApp.admin', [
-  'authApiApp.auth',
-  'ui.router'
+  'sistemium.auth',
+  'ui.router',
+  'authApiApp.admin.models'
 ]);

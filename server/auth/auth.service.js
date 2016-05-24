@@ -4,13 +4,24 @@ import config from '../config/environment';
 import compose from 'composable-middleware';
 import Token from '../api/token/token.model';
 var debug = require('debug')('authAPI:auth.service');
-import account from '../api/account/account.model';
+import account from '../models/account.model.js';
 var Account = account();
-import providerAccount from '../api/providerAccount/providerAccount.model';
+import providerAccount from '../models/providerAccount/providerAccount.model.js';
 var ProviderAccount = providerAccount();
 import _ from 'lodash';
+import winston from 'winston';
 import uuid from 'node-uuid';
 
+
+/**
+ *
+ * @params {Request} req - The express Request object
+ * @params {Response} res - The express Response object
+ * @params {function} next
+ *
+ * @return {}
+ *
+ * */
 var validateAuth = (req, res, next) => {
 
   let token = req.headers.authorization;
@@ -18,21 +29,26 @@ var validateAuth = (req, res, next) => {
   //debug ('validateAuth','token:',token);
 
   if (!token) {
-    return res.status(401).end('Unauthorized');
+    winston.log('info', 'Token is not defined, sending unauthorized status.');
+    return res.sendStatus(401);
   }
 
   Token.findById(token).then((user) => {
     //debug ('validateAuth', 'user:', user);
+    winston.log('info', `Successfully found token for user: ${user}`);
     req.user = user;
+    winston.log('debug', `req.user = ${user}`);
     next();
   }, (err) => {
-    return res.status(401).end(err);
+    winston.log('info', `Error occured while trying to find token by id(Token.findById(${token})).`);
+    winston.log('debug', `Error message: ${err}`);
+    return res.sendStatus(401);
   })
 };
 
 /**
  * Attaches the user object to the request if authenticated
- * Otherwise returns 403
+ * Otherwise returns 401
  */
 export function isAuthenticated() {
   return compose()
@@ -49,9 +65,12 @@ export function isAuthenticated() {
 
 /**
  * Checks if the user role meets the minimum requirements of the route
+ *
+ * @params {String} roleRequired - Parameter for role name
  */
 export function hasRole(roleRequired) {
   if (!roleRequired) {
+    winston.warn(`roleRequired parameter missing...`);
     throw new Error('Required role needs to be set');
   }
 
@@ -59,6 +78,7 @@ export function hasRole(roleRequired) {
     .use(isAuthenticated())
     .use(function meetsRequirements(req, res, next) {
       if (req.user.roles[roleRequired] || req.user.roles.indexOf(roleRequired) > -1) {
+        winston.info(`User have role '${roleRequired}'`);
         next();
       } else {
         res.status(403).end('Forbidden');
@@ -68,6 +88,9 @@ export function hasRole(roleRequired) {
 
 /**
  * Set token cookie directly for oAuth strategies
+ *
+ * @params {Request} req - Express Request object
+ * @params {Response} res - Express Response object
  */
 export function setAuthorized(req, res) {
   //debug ('User:', req.user);
@@ -127,3 +150,4 @@ export function setAuthorized(req, res) {
     res.redirect('/#/?access-token=' + req.authInfo);
   }
 }
+
