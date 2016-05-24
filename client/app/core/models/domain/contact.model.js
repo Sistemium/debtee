@@ -3,24 +3,7 @@
 (function () {
 
   angular.module('authApiApp')
-    //.factory('Contact', function (DS) {
-    //  return DS.defineResource({
-    //    name: 'contact',
-    //    relations: {
-    //      belongsTo: {
-    //        agent: {
-    //          localField: 'owner',
-    //          localKey: 'ownerAgentId',
-    //          parent: true
-    //        },
-    //        counterAgent: {
-    //          localField: 'counterAgent',
-    //          localKey: 'counterAgentId'
-    //        }
-    //      }
-    //    }
-    //  });
-    //})
+
     .run(function (Schema, saFormlyConfigService) {
       Schema.register({
         name: 'contact',

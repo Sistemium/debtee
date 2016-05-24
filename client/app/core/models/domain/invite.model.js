@@ -4,33 +4,6 @@
 
   angular.module('authApiApp')
 
-    //.factory('Invite', function (DS) {
-    //  return DS.defineResource({
-    //    name: 'invite',
-    //    relations: {
-    //      belongsTo: {
-    //        agent: {
-    //          localField: 'ownerAgent',
-    //          localKey: 'ownerAgentId'
-    //        }
-    //      },
-    //      hasOne: {
-    //        counterAgent: {
-    //          localField: 'acceptorAgent',
-    //          localKey: 'acceptorAgentId'
-    //        },
-    //        socialAccount: [{
-    //          localField: 'inviter',
-    //          localKey: 'inviterSocialAccountId'
-    //        },{
-    //          localField: 'invitee',
-    //          localKey: 'inviteeSocialAccountId'
-    //        }]
-    //      }
-    //    }
-    //  });
-    //})
-
     .run(function (Schema, saFormlyConfigService) {
       Schema.register({
         name: 'invite',
