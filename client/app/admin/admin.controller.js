@@ -14,7 +14,7 @@
     OrgService();
   }
 
-  angular.module('authApiApp.admin')
+  angular.module('debteeApp.admin')
     .controller('AdminController', AdminController);
 
 })();

@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp.core.filters')
+  angular.module('debteeApp.core.filters')
     .filter('reverse', function () {
       return function (items) {
         if (!angular.isArray(items)) {

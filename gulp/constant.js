@@ -39,7 +39,7 @@ gulp.task('constant', function () {
   appConfigConstants = _.merge({}, sharedConfig, appConfigConstants);
 
   return plugins.ngConstant({
-      name: 'authApiApp.constants',
+      name: 'debteeApp.constants',
       deps: [],
       wrap: true,
       stream: true,

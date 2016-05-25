@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('debt.contact', {

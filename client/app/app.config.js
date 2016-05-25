@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .config(function ($httpProvider, $urlRouterProvider, localStorageServiceProvider, toastrConfig) {
 
       $httpProvider.interceptors.push('errorInterceptor');
@@ -21,7 +21,7 @@
         .otherwise('/');
 
       localStorageServiceProvider
-        .setPrefix('authAPI');
+        .setPrefix('debtee');
     })
     .value('cgBusyDefaults', {
       //message:'Loading Stuff',

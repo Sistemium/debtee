@@ -2,12 +2,12 @@
 
 (function (ng) {
 
-  ng.module('authApiApp.core', [
-    'authApiApp.core.directives',
-    'authApiApp.core.filters',
-    'authApiApp.core.interceptors',
-    'authApiApp.core.services',
-    'authApiApp.core.models'
+  ng.module('debteeApp.core', [
+    'debteeApp.core.directives',
+    'debteeApp.core.filters',
+    'debteeApp.core.interceptors',
+    'debteeApp.core.services',
+    'debteeApp.core.models'
   ]);
 
 })(angular);

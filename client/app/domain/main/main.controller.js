@@ -34,7 +34,7 @@
 
   }
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .controller('MainController', MainController);
 
 })();

@@ -59,7 +59,7 @@ function UtilService($window) {
   return Util;
 }
 
-angular.module('authApiApp.util')
+angular.module('debteeApp.util')
   .factory('Util', UtilService);
 
 })();

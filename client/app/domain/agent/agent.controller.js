@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .controller('AgentCtrl', function ($scope,
                                      models,
                                      $uiViewScroll,

@@ -66,5 +66,5 @@ var LoginController = function (Auth, $state) {
 
 };
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .controller('LoginController', LoginController);

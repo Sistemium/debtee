@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

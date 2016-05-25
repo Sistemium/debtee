@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .directive('footer', function() {
     return {
       templateUrl: 'components/footer/footer.html',

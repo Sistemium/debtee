@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .controller('OperationInfoCtrl', function ($stateParams,
                                                $state,
                                                $scope,

@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp.dependencies', [
+  angular.module('debteeApp.dependencies', [
     'ngSanitize',
     'ui.router',
     'ui.router.stateHelper',
@@ -17,11 +17,11 @@
     'sistemiumBootstrap'
   ]);
 
-  angular.module('authApiApp', [
-      'authApiApp.dependencies',
-      'authApiApp.core',
-      'authApiApp.admin',
-      'authApiApp.constants'
+  angular.module('debteeApp', [
+      'debteeApp.dependencies',
+      'debteeApp.core',
+      'debteeApp.admin',
+      'debteeApp.constants'
     ])
 
     .run(function ($rootScope, InitService, sabErrorsService) {

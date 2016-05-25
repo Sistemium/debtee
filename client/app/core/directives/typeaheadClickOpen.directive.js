@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .directive('typeaheadClickOpen', function ($timeout) {
       return {
         require: 'ngModel',

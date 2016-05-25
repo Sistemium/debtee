@@ -92,5 +92,5 @@ function SettingsController($window,
   init();
 }
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .controller('SettingsController', SettingsController);

@@ -44,7 +44,7 @@ gulp.task('html', function () {
   return gulp.src(`${conf.clientPath}/{app,components}/**/*.jade`)
     .pipe(plugins.jade({pretty: true}))
     .pipe(plugins.angularTemplatecache({
-      module: 'authApiApp'
+      module: 'debteeApp'
     }))
     .pipe(gulp.dest('.tmp'));
 });

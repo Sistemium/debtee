@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .factory('InviteService', function (SettingsService,
                                         models,
                                         $state,

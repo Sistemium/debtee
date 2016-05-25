@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .controller('InviteListCtrl', function ($scope,
                                             $state,
                                             $q,

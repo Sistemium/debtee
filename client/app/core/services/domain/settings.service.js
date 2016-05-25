@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp.core.services')
+  angular.module('debteeApp.core.services')
     .factory('SettingsService', function ($timeout, models, $rootScope, localStorageService) {
 
       var currentAgent;

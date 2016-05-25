@@ -24,9 +24,9 @@
     });
   }
 
-  angular.module('authApiApp.core.models', [
+  angular.module('debteeApp.core.models', [
       'sistemium',
-      'authApiApp.constants'
+      'debteeApp.constants'
     ])
     .config(function (DSHttpAdapterProvider, appConfig) {
       angular.extend(DSHttpAdapterProvider.defaults, {

@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
 
     .run(function (saFormlyConfigService, Schema) {
 

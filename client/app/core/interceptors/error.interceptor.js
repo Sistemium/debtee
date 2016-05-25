@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp.core.interceptors')
+  angular.module('debteeApp.core.interceptors')
     .factory('errorInterceptor', function ($q, $injector) {
       return {
         /**

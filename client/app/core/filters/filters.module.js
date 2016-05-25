@@ -2,6 +2,6 @@
 
 (function () {
 
-  angular.module('authApiApp.core.filters', []);
+  angular.module('debteeApp.core.filters', []);
 
 }());

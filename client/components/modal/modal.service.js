@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .factory('Modal', function($rootScope, $uibModal) {
     /**
      * Opens a modal

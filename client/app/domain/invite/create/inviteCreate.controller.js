@@ -26,7 +26,7 @@
 
   }
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .controller('InviteCreateCtrl', InviteCreateController);
 
 }());

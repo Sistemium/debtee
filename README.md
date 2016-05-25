@@ -1,4 +1,4 @@
-# auth-api
+# Debtee
 
 ## Getting Started
 

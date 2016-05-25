@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
 
     .factory('Account', function (DS, appConfig) {
       return DS.defineResource({

@@ -42,7 +42,7 @@
 
   }
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .controller('OperationListCtrl', OperationListController);
 
 

@@ -4,7 +4,7 @@ describe('Controller: MainController', function () {
 
 
   // load the controller's module
-  beforeEach(module('authApiApp'));
+  beforeEach(module('debteeApp'));
   beforeEach(module('stateMock'));
   beforeEach(module('js-data-mocks'));
 

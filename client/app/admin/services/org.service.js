@@ -1,6 +1,6 @@
 (function (ng) {
   'use strict';
-  ng.module('authApiApp.admin')
+  ng.module('debteeApp.admin')
     .service('OrgService', function (Schema) {
 
       debugger;

@@ -47,5 +47,5 @@ function NavbarController($rootScope,
 
 }
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .controller('NavbarController', NavbarController);

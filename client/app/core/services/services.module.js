@@ -2,10 +2,10 @@
 
 (function () {
 
-  angular.module('authApiApp.core.services', [
+  angular.module('debteeApp.core.services', [
     'sistemium',
     'sistemiumBootstrap',
-    'authApiApp.core.models'
+    'debteeApp.core.models'
   ]);
 
 }());

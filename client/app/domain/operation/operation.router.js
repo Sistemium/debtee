@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .config(function (stateHelperProvider) {
     stateHelperProvider
       .state({

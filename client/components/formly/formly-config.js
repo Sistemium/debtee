@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp').config(['formlyConfigProvider', function (formlyConfig) {
+angular.module('debteeApp').config(['formlyConfigProvider', function (formlyConfig) {
   var attributes = [
     'date-disabled',
     'custom-class',

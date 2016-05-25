@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('authApiApp.admin')
+angular.module('debteeApp.admin')
   .config(function($stateProvider) {
     $stateProvider
       .state('debt.admin', {

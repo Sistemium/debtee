@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .config(function ($provide) {
       $provide.decorator('$exceptionHandler', function ($delegate, $injector) {
         return function (exception, cause) {

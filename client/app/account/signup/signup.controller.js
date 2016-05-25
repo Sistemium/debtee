@@ -39,5 +39,5 @@ class SignupController {
   }
 }
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .controller('SignupController', SignupController);

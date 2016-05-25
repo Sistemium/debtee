@@ -4,7 +4,7 @@
 //
 //// load the controller's module
 //// FIXME: modules cannot be loaded after inject, therefore root cannot have inject, or load all modules here
-//beforeEach(module('authApiApp'));
+//beforeEach(module('debteeApp'));
 //beforeEach(module('stateMock'));
 //
 //var $httpBackend;

@@ -2,7 +2,7 @@
 
 (function () {
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .run(function (Schema) {
       Schema.register({
         name: 'currency',

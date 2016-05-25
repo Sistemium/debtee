@@ -1,6 +1,6 @@
 (function (ng) {
   'use strict';
-  ng.module('authApiApp.admin.models', ['sistemium.schema']);
+  ng.module('debteeApp.admin.models', ['sistemium.schema']);
 
 
 

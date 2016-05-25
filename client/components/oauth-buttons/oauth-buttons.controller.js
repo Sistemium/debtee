@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('authApiApp')
+angular.module('debteeApp')
   .controller('OauthButtonsCtrl', function($window, appConfig) {
     this.loginOauth = function(provider) {
-      $window.location.href = appConfig.authUrl + 'auth/' + provider;
+      $window.location.href = appConfig.authUrl + '/auth/' + provider;
     };
   });

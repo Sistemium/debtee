@@ -109,7 +109,7 @@
 
   }
 
-  angular.module('authApiApp')
+  angular.module('debteeApp')
     .controller('OperationAddCtrl', OperationAddController);
 
 }());
