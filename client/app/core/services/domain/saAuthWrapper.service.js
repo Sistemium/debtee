@@ -3,7 +3,8 @@
    ng.module('debteeApp.core.services')
      .factory('Auth', function (saAuth, appConfig) {
        var config = {
-         url: appConfig.authUrl
+         authUrl: appConfig.authUrl,
+         userRoles: appConfig.userRoles
        };
        return saAuth(config);
      })
