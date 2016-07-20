@@ -14,6 +14,7 @@
     'angularMoment',
     'cgBusy',
     'sistemium',
+    'sistemiumAngularAuth',
     'sistemiumBootstrap'
   ]);
 
