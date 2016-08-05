@@ -4,21 +4,24 @@
 
   angular.module('debteeApp')
 
-    .factory('Account', function (DS, appConfig) {
-      return DS.defineResource({
+    .run(function (Schema) {
+      Schema.register({
         name: 'account',
-        basePath: appConfig.apiUrl,
         relations: {
           hasMany: {
-            providerAccount: {
-              localField: 'providers',
-              foreignKey: 'accountId'
+            ProviderAccount: {
+              foreignKey: 'accountId',
+              localField: 'providerAccounts'
+            },
+            OrgAccount: {
+              foreignKey: 'accountId',
+              localField: 'orgAccounts'
             }
           }
         }
       });
     })
-    .run(function (Schema, Account, appConfig, saFormlyConfigService) {
+    .run(function (Schema, appConfig, saFormlyConfigService) {
 
       Schema.register({
         name: 'providerAccount',
