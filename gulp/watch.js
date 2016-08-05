@@ -11,7 +11,7 @@ gulp.task('watch', () => {
   var testFiles = _.union(paths.client.test, paths.server.test.unit, paths.server.test.integration);
 
   plugins.livereload.listen({
-    port: process.env.LIVERELOAD_PORT || 35729
+    port: process.env.LIVERELOAD_PORT || 35720
   });
 
   plugins.watch(paths.client.styles, () => {  //['inject:scss']
