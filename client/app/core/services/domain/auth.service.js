@@ -1,10 +1,10 @@
 (function (ng) {
   'use strict';
    ng.module('debteeApp.core.services')
-     .factory('Auth', function (saAuth, appConfig) {
+     .factory('Auth', function (saAuth, Schema, appConfig) {
        var config = {
          authUrl: appConfig.authUrl,
-         userRoles: appConfig.userRoles
+         Account: Schema.model('account')
        };
        return saAuth(config);
      })
