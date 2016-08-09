@@ -4,8 +4,8 @@
 
   angular.module('debteeApp')
 
-    .run(function (Schema, saFormlyConfigService) {
-      Schema.register({
+    .run(function (schema, saFormlyConfigService) {
+      schema.register({
         name: 'agent',
         relations: {
           hasMany: {

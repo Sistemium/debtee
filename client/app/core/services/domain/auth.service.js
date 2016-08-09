@@ -1,12 +1,11 @@
 (function (ng) {
   'use strict';
    ng.module('debteeApp.core.services')
-     .factory('Auth', function (saAuth, Schema, appConfig) {
+     .factory('Auth', function (saAuth, appConfig) {
        var config = {
-         authUrl: appConfig.authUrl,
-         Account: Schema.model('account')
+         authUrl: appConfig.authUrl
        };
        return saAuth(config);
-     })
+     });
 
 })(angular);

@@ -2,7 +2,7 @@
 
 (function () {
 
-  function Schema(saSchema, $http, appConfig) {
+  function schema(saSchema, $http, appConfig) {
     //pass object to saSchema to override methods
     return saSchema({
       getCount: function (params) {
@@ -33,9 +33,9 @@
         basePath: appConfig.jsDataBasePath
       });
     })
-    .service('Schema', Schema)
-    .service('models', function (Schema) {
-      return Schema.models();
+    .service('schema', schema)
+    .service('models', function (schema) {
+      return schema.models();
     })
     .run(function (DS, $rootScope) {
       $rootScope.$on('logged-off', function () {

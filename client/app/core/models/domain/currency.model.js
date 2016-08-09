@@ -3,8 +3,8 @@
 (function () {
 
   angular.module('debteeApp')
-    .run(function (Schema) {
-      Schema.register({
+    .run(function (schema) {
+      schema.register({
         name: 'currency',
         relations: {
           hasMany: {

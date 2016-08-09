@@ -3,7 +3,7 @@
 (function () {
 
   angular.module('debteeApp.core.services')
-    .factory('InitCtrlService', function ($filter, SettingsService, saNgTable) {
+    .factory('InitCtrlService', function ($filter, SettingsService, sabNgTable) {
 
       // var deb = debug('debtee:InitCtrlService');
 
@@ -11,7 +11,7 @@
 
         return angular.extend(ctrl, {
           setupNgTable: function (model) {
-            return saNgTable.setup (ctrl, model);
+            return sabNgTable.setup (ctrl, model);
           }
         });
 

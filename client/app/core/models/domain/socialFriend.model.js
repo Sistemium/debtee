@@ -4,8 +4,8 @@
 
   angular.module('debteeApp')
 
-    .run(function (Schema, appConfig) {
-      Schema.register({
+    .run(function (schema, appConfig) {
+      schema.register({
         endpoint: 'facebook/friend',
         basePath: appConfig.apiUrl,
         name: 'facebookFriend',
@@ -32,7 +32,7 @@
           }
         }
       });
-      Schema.register({
+      schema.register({
         endpoint: 'google/friend',
         basePath: appConfig.apiUrl,
         name: 'googleFriend',
@@ -59,7 +59,7 @@
           }
         }
       });
-      Schema.register({
+      schema.register({
         name: 'socialFriend',
         relations: {
           hasMany: {

@@ -85,7 +85,7 @@
       });
 
       vm.busySocialFriends = $q(function (resolve, reject) {
-        Auth.getCurrentUser(function (acc) {
+        Auth.getCurrentUser(function () {
 
           Invite.findAll({}, {bypassCache: true}).then(function (invites) {
             var promises = [];

@@ -1,8 +1,8 @@
 (function (ng) {
   'use strict';
   ng.module('debteeApp.admin.models')
-    .run(function (Schema) {
-      Schema.register({
+    .run(function (schema) {
+      schema.register({
         name: 'orgProvider',
         relations: {
           belongsTo: {

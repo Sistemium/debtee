@@ -4,8 +4,8 @@
 
   angular.module('debteeApp')
 
-    .run(function (Schema) {
-      Schema.register({
+    .run(function (schema) {
+      schema.register({
         name: 'account',
         relations: {
           hasMany: {
@@ -21,9 +21,9 @@
         }
       });
     })
-    .run(function (Schema, appConfig, saFormlyConfigService) {
+    .run(function (schema, appConfig, saFormlyConfigService) {
 
-      Schema.register({
+      schema.register({
         name: 'providerAccount',
         basePath: appConfig.apiUrl,
         relations: {
@@ -36,7 +36,7 @@
         }
       });
 
-      Schema.register({
+      schema.register({
         name: 'socialAccount',
         basePath: appConfig.apiUrl,
         relations: {

@@ -1,10 +1,9 @@
 (function (ng) {
   'use strict';
   ng.module('debteeApp.admin')
-    .service('OrgService', function (Schema) {
+    .service('OrgService', function (schema) {
 
-      debugger;
-      let org = Schema().models().org;
+      return schema().models().org;
 
     })
   ;

@@ -4,9 +4,9 @@
 
   angular.module('debteeApp')
 
-    .run(function (saFormlyConfigService, Schema) {
+    .run(function (saFormlyConfigService, schema) {
 
-      Schema.register({
+      schema.register({
         name: 'operation',
         relations: {
           belongsTo: {
