@@ -23,8 +23,8 @@ div(cg-busy='vm.busy')
     tbody
       tr(ng-repeat='friend in vm.googleFriends track by friend.id')
         td
-          img(ng-src='{{friend.image.url}}')
-        td {{friend.displayName}}
+          img(ng-src='{{friend.avatarUrl}}')
+        td {{friend.name}}
         td
           button.btn.btn-primary(type='button' title='Accept the invite' ng-click='vm.inviteSocialFriend(friend, "google")' ng-show='friend.status() === "invite"') Invite
           span.fa.fa-hourglass-half(title='Waiting for confirm' ng-show='friend.status() === "waiting"')

@@ -25,7 +25,7 @@
 
       schema.register({
         name: 'providerAccount',
-        basePath: appConfig.apiUrl,
+        basePath: 'http://localhost:9000/api/aa/',
         relations: {
           belongsTo: {
             account: {

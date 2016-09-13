@@ -15,14 +15,9 @@
       var Invite = models.invite;
       var FacebookFriend = models.facebookFriend;
       var GoogleFriend = models.googleFriend;
-      var SocialFriend = models.socialFriend;
       var SocialAccount = models.socialAccount;
       var ProviderAccount = models.providerAccount;
       vm.currentUserPromise = Auth.getCurrentUser();
-
-      SocialFriend.findAll({}).then((res) => {
-        console.log(res);
-      });
 
       function init() {
         vm.busy = $q(function (resolve, reject) {
@@ -35,7 +30,8 @@
             var promises = [];
             _.each(res[0], function (r) {
               //promises.push(FacebookFriend.loadRelations(r).then(function () {
-                vm.facebookFriends.push(r);
+              console.log(r);
+              vm.facebookFriends.push(r);
               //}));
             });
 

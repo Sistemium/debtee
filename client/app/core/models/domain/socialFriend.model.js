@@ -5,9 +5,10 @@
   angular.module('debteeApp')
 
     .run(function (schema, appConfig) {
+
       schema.register({
-        endpoint: 'facebook/friend',
-        basePath: appConfig.apiUrl,
+        endpoint: 'api/social/facebook',
+        basePath: appConfig.authUrl,
         name: 'facebookFriend',
         relations: {
           hasMany: {
@@ -33,8 +34,8 @@
         }
       });
       schema.register({
-        endpoint: 'google/friend',
-        basePath: appConfig.apiUrl,
+        endpoint: 'api/social/google',
+        basePath: appConfig.authUrl,
         name: 'googleFriend',
         relations: {
           hasMany: {
@@ -59,26 +60,7 @@
           }
         }
       });
-      schema.register({
-        name: 'socialFriend',
-        relations: {
-          hasMany: {
-            invite: [{
-              localField: 'invites',
-              foreignKey: 'inviterSocialAccountId'
-            }, {
-              localField: 'invitations',
-              foreignKey: 'inviteeSocialAccountId'
-            }]
-          },
-          belongsTo: {
-            socialAccount: [{
-              localField: 'ownerSocialAccount',
-              localKey: 'ownerSocialAccountId'
-            }]
-          }
-        }
-      });
+
     })
   ;
 
