@@ -27,6 +27,11 @@
               localKey: 'inviteeSocialAccountId'
             }]
           }
+        },
+        methods: {
+          isCurrentUserIssuedInvites: function (ownerAgentId) {
+            return this.ownerAgentId === ownerAgentId;
+          }
         }
       });
 

@@ -97,6 +97,10 @@
               }));
             });
             $q.all(promises).then(function () {
+              vm.currentUserIssuedInvites = vm.invitesWaitingForAccept.filter(function (item) {
+                return item.isCurrentUserIssuedInvites(vm.agent.id);
+              });
+              vm.invitesWaitingForAccept = _.difference(vm.invitesWaitingForAccept, vm.currentUserIssuedInvites);
               resolve();
             }, function () {
               reject();

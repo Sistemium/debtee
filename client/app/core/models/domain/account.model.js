@@ -37,8 +37,9 @@
       });
 
       schema.register({
+        endpoint: 'social/socialAccount',
         name: 'socialAccount',
-        basePath: appConfig.apiUrl,
+        basePath: appConfig.authApiUrl,
         relations: {
           hasMany: {
             invite: [

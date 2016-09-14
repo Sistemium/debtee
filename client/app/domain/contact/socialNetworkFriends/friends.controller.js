@@ -16,7 +16,6 @@
       var FacebookFriend = models.facebookFriend;
       var GoogleFriend = models.googleFriend;
       var SocialAccount = models.socialAccount;
-      var ProviderAccount = models.providerAccount;
       vm.currentUserPromise = Auth.getCurrentUser();
 
       function init() {
@@ -52,13 +51,17 @@
 
         inviteSocialFriend: function (friend, provider) {
           //TODO make it possible to choose provider with which to invite
-          let providerAccount = _.find(ProviderAccount.getAll(), {'provider': provider});
+          let providerAccount = _.find(vm.currentUser.providers, function(i) {
+            return i.profileData.provider === provider;
+          });
           let inviterId = providerAccount.profileId;
 
-          SocialAccount.findAll({profileId: friend.id, provider: provider}).then((inviteeSocialAccount) => {
+          SocialAccount.findAll({profileId: friend.profileId, provider: provider}).then((inviteeSocialAccount) => {
             SocialAccount.findAll({profileId: inviterId, provider: provider}).then((inviterSocialAccount) => {
               let data = {
                 ownerAgentId: vm.agent.id,
+                code: null,
+                status: null,
                 inviteeSocialAccountId: inviteeSocialAccount[0].id,
                 inviterSocialAccountId: inviterSocialAccount[0].id
               };
